@@ -1,7 +1,7 @@
 
 # Research Group Analitycs Dashboard
 
-Software para la extracción de los datos bibliográficos de la producción científica de los grupos de investigación registrados en las plataformas CvLAC y GrupLAC pertenecientes a SCIENTI.
+Software para la extracción de los datos bibliográficos de la producción científica de los invstigadores y de grupos de investigación registrados en las plataformas CvLAC y GrupLAC pertenecientes a Scienti.
 
 Tiene las siguientes características principales:
 - Extrae datos de investigadores y grupos de investigación de las plataformas CvLAC y GrupLAC, de manera masiva o bajo demanda.
@@ -27,11 +27,7 @@ Dentro de la carpeta generada, ejecute el siguiente comando para instalar las li
 
 ---
 
-## Contenido
-- Extractor de datos de GrupLAC y CvLAC.
-- Extractor de datos de Scopus.
-
-## Extractor de datos de GrupLAC y CvLAC.
+## Extractor de datos.
 
 Esta herramienta extrae los datos del aplicativo CvLAC y GrupLAC pertenecientes al sistema Scienti en Colombia. Para utilizar esta herramienta, se requiere ingresar el enlace del CvLAC o GrupLAC de interés y la plataforma extraerá la información pública disponible en el sistema.
 Se recomienda que cualquier persona que utilice esta herramienta lea detenidamente la [política de privacidad y los términos de uso](https://minciencias.gov.co/ciudadano/terminosycondiciones-datospersonales) definidos por MinCiencias, que establece las pautas y normas para el uso ético de los datos.
