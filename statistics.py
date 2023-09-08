@@ -9,12 +9,12 @@ import shutil
 import os
 
 try:
-    print("######### INICIO DE PREPROCESAMIENTO ############")
-    shutil.rmtree('dashboard/assets/data/preprocessed_data')
-    os.mkdir('dashboard/assets/data/preprocessed_data')
-    print('preprocessed folder created')
+    print("######### INICIO DE LIMPIEZA ############")
+    shutil.rmtree('data/')
+    os.mkdir('data/')
+    print('data/')
 except Exception as e:
-    os.mkdir('dashboard/assets/data/preprocessed_data')
+    os.mkdir('data/')
     print(e)
     pass
 
@@ -101,44 +101,44 @@ except Exception as e:
     ############################################
     print("")
     print("RECUPERANDO TABLAS LOCALES EXTRAIDAS...")
-    gruplac_articulos = pd.read_csv('dashboard/assets/data/extracted_data/aux_articulosg.csv', dtype = str)
-    gruplac_basico = pd.read_csv('dashboard/assets/data/extracted_data/aux_basicog.csv', dtype = str)
-    gruplac_caplibros = pd.read_csv('dashboard/assets/data/extracted_data/aux_caplibrosg.csv', dtype = str)
-    gruplac_integrantes = pd.read_csv('dashboard/assets/data/extracted_data/aux_integrantes.csv', dtype = str)
-    gruplac_libros = pd.read_csv('dashboard/assets/data/extracted_data/aux_librosg.csv', dtype = str) 
-    gruplac_oarticulos = pd.read_csv('dashboard/assets/data/extracted_data/aux_oarticulos.csv', dtype = str)
-    gruplac_olibros = pd.read_csv('dashboard/assets/data/extracted_data/aux_olibros.csv', dtype = str)
-    gruplac_cdoctorado= pd.read_csv('dashboard/assets/data/extracted_data/aux_cdoctorado.csv', dtype = str)
-    gruplac_cmaestria= pd.read_csv('dashboard/assets/data/extracted_data/aux_cmaestria.csv', dtype = str)
-    gruplac_disenoind= pd.read_csv('dashboard/assets/data/extracted_data/aux_disenoind.csv', dtype = str)
-    gruplac_empresatec= pd.read_csv('dashboard/assets/data/extracted_data/aux_empresatecg.csv', dtype = str)
-    gruplac_innovaempresa= pd.read_csv('dashboard/assets/data/extracted_data/aux_innovaempresag.csv', dtype = str)
-    gruplac_instituciones= pd.read_csv('dashboard/assets/data/extracted_data/aux_instituciones.csv', dtype = str)
-    gruplac_lineas= pd.read_csv('dashboard/assets/data/extracted_data/aux_lineas.csv', dtype = str)
-    gruplac_otecnologicos= pd.read_csv('dashboard/assets/data/extracted_data/aux_otecnologicos.csv', dtype = str)
-    gruplac_pdoctorado= pd.read_csv('dashboard/assets/data/extracted_data/aux_pdoctorado.csv', dtype = str)
-    gruplac_plantapiloto= pd.read_csv('dashboard/assets/data/extracted_data/aux_plantapilotog.csv', dtype = str)
-    gruplac_pmaestria= pd.read_csv('dashboard/assets/data/extracted_data/aux_pmaestria.csv', dtype = str)
-    gruplac_prototipos= pd.read_csv('dashboard/assets/data/extracted_data/aux_prototiposg.csv', dtype = str)
-    gruplac_software= pd.read_csv('dashboard/assets/data/extracted_data/aux_softwareg.csv', dtype = str)
+    gruplac_articulos = pd.read_csv('data/aux_articulosg.csv', dtype = str)
+    gruplac_basico = pd.read_csv('data/aux_basicog.csv', dtype = str)
+    gruplac_caplibros = pd.read_csv('data/aux_caplibrosg.csv', dtype = str)
+    gruplac_integrantes = pd.read_csv('data/aux_integrantes.csv', dtype = str)
+    gruplac_libros = pd.read_csv('data/aux_librosg.csv', dtype = str) 
+    gruplac_oarticulos = pd.read_csv('data/aux_oarticulos.csv', dtype = str)
+    gruplac_olibros = pd.read_csv('data/aux_olibros.csv', dtype = str)
+    gruplac_cdoctorado= pd.read_csv('data/aux_cdoctorado.csv', dtype = str)
+    gruplac_cmaestria= pd.read_csv('data/aux_cmaestria.csv', dtype = str)
+    gruplac_disenoind= pd.read_csv('data/aux_disenoind.csv', dtype = str)
+    gruplac_empresatec= pd.read_csv('data/aux_empresatecg.csv', dtype = str)
+    gruplac_innovaempresa= pd.read_csv('data/aux_innovaempresag.csv', dtype = str)
+    gruplac_instituciones= pd.read_csv('data/aux_instituciones.csv', dtype = str)
+    gruplac_lineas= pd.read_csv('data/aux_lineas.csv', dtype = str)
+    gruplac_otecnologicos= pd.read_csv('data/aux_otecnologicos.csv', dtype = str)
+    gruplac_pdoctorado= pd.read_csv('data/aux_pdoctorado.csv', dtype = str)
+    gruplac_plantapiloto= pd.read_csv('data/aux_plantapilotog.csv', dtype = str)
+    gruplac_pmaestria= pd.read_csv('data/aux_pmaestria.csv', dtype = str)
+    gruplac_prototipos= pd.read_csv('data/aux_prototiposg.csv', dtype = str)
+    gruplac_software= pd.read_csv('data/aux_softwareg.csv', dtype = str)
     
-    cvlac_areas=pd.read_csv('dashboard/assets/data/extracted_data/aux_actuacion.csv', dtype = str)
-    cvlac_articulos=pd.read_csv('dashboard/assets/data/extracted_data/aux_articulos.csv', dtype = str)
-    cvlac_basico=pd.read_csv('dashboard/assets/data/extracted_data/aux_basico.csv', dtype = str)
-    cvlac_lineas=pd.read_csv('dashboard/assets/data/extracted_data/aux_investigacion.csv', dtype = str)
-    cvlac_libros=pd.read_csv('dashboard/assets/data/extracted_data/aux_libros.csv', dtype = str)
-    cvlac_reconocimiento=pd.read_csv('dashboard/assets/data/extracted_data/aux_reconocimiento.csv', dtype = str)
-    cvlac_caplibros=pd.read_csv('dashboard/assets/data/extracted_data/aux_caplibros.csv', dtype = str)
-    cvlac_empresatec=pd.read_csv('dashboard/assets/data/extracted_data/aux_empresatec.csv', dtype = str)
-    cvlac_innovaempresa=pd.read_csv('dashboard/assets/data/extracted_data/aux_innovaempresa.csv', dtype = str)
-    cvlac_prototipos=pd.read_csv('dashboard/assets/data/extracted_data/aux_prototipo.csv', dtype = str)
-    cvlac_software=pd.read_csv('dashboard/assets/data/extracted_data/aux_software.csv', dtype = str)
-    cvlac_tecnologicos=pd.read_csv('dashboard/assets/data/extracted_data/aux_tecnologicos.csv', dtype = str)
-    cvlac_identificadores=pd.read_csv('dashboard/assets/data/extracted_data/aux_identificadores.csv', dtype = str)
+    cvlac_areas=pd.read_csv('data/aux_actuacion.csv', dtype = str)
+    cvlac_articulos=pd.read_csv('data/aux_articulos.csv', dtype = str)
+    cvlac_basico=pd.read_csv('data/aux_basico.csv', dtype = str)
+    cvlac_lineas=pd.read_csv('data/aux_investigacion.csv', dtype = str)
+    cvlac_libros=pd.read_csv('data/aux_libros.csv', dtype = str)
+    cvlac_reconocimiento=pd.read_csv('data/aux_reconocimiento.csv', dtype = str)
+    cvlac_caplibros=pd.read_csv('data/aux_caplibros.csv', dtype = str)
+    cvlac_empresatec=pd.read_csv('data/aux_empresatec.csv', dtype = str)
+    cvlac_innovaempresa=pd.read_csv('data/aux_innovaempresa.csv', dtype = str)
+    cvlac_prototipos=pd.read_csv('data/aux_prototipo.csv', dtype = str)
+    cvlac_software=pd.read_csv('data/aux_software.csv', dtype = str)
+    cvlac_tecnologicos=pd.read_csv('data/aux_tecnologicos.csv', dtype = str)
+    cvlac_identificadores=pd.read_csv('data/aux_identificadores.csv', dtype = str)
     gruplac_duplicados={'articulos':[],'libros':[],'oarticulos':[],'libros':[],'olibros':[],'caplibros':[],'otecnologicos':[],'software':[],'prototipos':[]}
 
 ###########################################
-#PREPROCESSING
+#Limpieza
 ##########################################
 print("Limpiando datos...")
 #LIMPIEZA DE TABLAS CVLAC
@@ -239,20 +239,22 @@ cvlac_tecnologicos['palabras']=cvlac_tecnologicos['palabras'].fillna('No Aplica'
 cvlac_tecnologicos['areas']=cvlac_tecnologicos['areas'].fillna('No Aplica').astype(str).replace(' -- ',';',regex=True)
 cvlac_tecnologicos['sectores']=cvlac_tecnologicos['sectores'].fillna('No Aplica').astype(str).str.extract(r'(^[^-]*)',expand=False).replace('','No Aplica').str.strip()
 
-cvlac_articulos.to_csv('dashboard/assets/data/preprocessed_data/cvlac_articulos.csv',index=False)
-cvlac_basico.to_csv('dashboard/assets/data/preprocessed_data/cvlac_basico.csv',index=False)
-cvlac_caplibros.to_csv('dashboard/assets/data/preprocessed_data/cvlac_caplibros.csv',index=False)
-cvlac_libros.to_csv('dashboard/assets/data/preprocessed_data/cvlac_libros.csv',index=False)
-cvlac_empresatec.to_csv('dashboard/assets/data/preprocessed_data/cvlac_empresatec.csv',index=False)
-cvlac_innovaempresa.to_csv('dashboard/assets/data/preprocessed_data/cvlac_innovaempresa.csv',index=False)
-cvlac_lineas.to_csv('dashboard/assets/data/preprocessed_data/cvlac_lineas.csv',index=False)
-cvlac_tecnologicos.to_csv('dashboard/assets/data/preprocessed_data/cvlac_otecnologicos.csv',index=False)
-cvlac_prototipos.to_csv('dashboard/assets/data/preprocessed_data/cvlac_prototipos.csv',index=False)
-cvlac_software.to_csv('dashboard/assets/data/preprocessed_data/cvlac_software.csv',index=False)
-cvlac_areas.to_csv('dashboard/assets/data/preprocessed_data/cvlac_areas.csv',index=False)
-cvlac_reconocimiento.to_csv('dashboard/assets/data/preprocessed_data/cvlac_reconocimiento.csv',index=False)
-cvlac_identificadores.to_csv('dashboard/assets/data/preprocessed_data/cvlac_identificadores.csv',index=False)
-
+#GUARDAR CONJUNTOS DE DATOS LIMPIOS
+"""
+cvlac_articulos.to_csv('data/cvlac_articulos.csv',index=False)
+cvlac_basico.to_csv('data/cvlac_basico.csv',index=False)
+cvlac_caplibros.to_csv('data/cvlac_caplibros.csv',index=False)
+cvlac_libros.to_csv('data/cvlac_libros.csv',index=False)
+cvlac_empresatec.to_csv('data/cvlac_empresatec.csv',index=False)
+cvlac_innovaempresa.to_csv('data/cvlac_innovaempresa.csv',index=False)
+cvlac_lineas.to_csv('data/cvlac_lineas.csv',index=False)
+cvlac_tecnologicos.to_csv('data/cvlac_otecnologicos.csv',index=False)
+cvlac_prototipos.to_csv('data/cvlac_prototipos.csv',index=False)
+cvlac_software.to_csv('data/cvlac_software.csv',index=False)
+cvlac_areas.to_csv('data/cvlac_areas.csv',index=False)
+cvlac_reconocimiento.to_csv('data/cvlac_reconocimiento.csv',index=False)
+cvlac_identificadores.to_csv('data/cvlac_identificadores.csv',index=False)
+"""
 #LIMPIEZA DE TABLAS GRUPLAC
 
 gruplac_basico['fecha_formacion']=pd.to_datetime(gruplac_basico['fecha_formacion']).dt.to_period('M')#DTYPE: period[M]
@@ -573,29 +575,31 @@ c=gruplac_plantapiloto.groupby(['idgruplac','nombre','fecha']).size().reset_inde
 gruplac_duplicados['empresatec']=c[c['size']>1].drop_duplicates('idgruplac')['idgruplac'].tolist()
 gruplac_plantapiloto=gruplac_plantapiloto.sort_values(['verificado'],ascending=False).drop_duplicates(['idgruplac','nombre','fecha'],keep='first')
 
-gruplac_articulos.to_csv('dashboard/assets/data/preprocessed_data/gruplac_articulos.csv',index=False)
-gruplac_basico.to_csv('dashboard/assets/data/preprocessed_data/gruplac_basico.csv',index=False)
-gruplac_caplibros.to_csv('dashboard/assets/data/preprocessed_data/gruplac_caplibros.csv',index=False)
-gruplac_integrantes.to_csv('dashboard/assets/data/preprocessed_data/gruplac_integrantes.csv',index=False)
-gruplac_libros.to_csv('dashboard/assets/data/preprocessed_data/gruplac_libros.csv',index=False)
-gruplac_oarticulos.to_csv('dashboard/assets/data/preprocessed_data/gruplac_oarticulos.csv',index=False)
-gruplac_olibros.to_csv('dashboard/assets/data/preprocessed_data/gruplac_olibros.csv',index=False)
-gruplac_cdoctorado.to_csv('dashboard/assets/data/preprocessed_data/gruplac_cdoctorado.csv',index=False)
-gruplac_cmaestria.to_csv('dashboard/assets/data/preprocessed_data/gruplac_cmaestria.csv',index=False)
-gruplac_disenoind.to_csv('dashboard/assets/data/preprocessed_data/gruplac_disenoind.csv',index=False)
-gruplac_empresatec.to_csv('dashboard/assets/data/preprocessed_data/gruplac_empresatec.csv',index=False)
-gruplac_innovaempresa.to_csv('dashboard/assets/data/preprocessed_data/gruplac_innovaempresa.csv',index=False)
-gruplac_instituciones.to_csv('dashboard/assets/data/preprocessed_data/gruplac_instituciones.csv',index=False)
-gruplac_lineas.to_csv('dashboard/assets/data/preprocessed_data/gruplac_lineas.csv',index=False)
-gruplac_otecnologicos.to_csv('dashboard/assets/data/preprocessed_data/gruplac_otecnologicos.csv',index=False)
-gruplac_pdoctorado.to_csv('dashboard/assets/data/preprocessed_data/gruplac_pdoctorado.csv',index=False)
-gruplac_plantapiloto.to_csv('dashboard/assets/data/preprocessed_data/gruplac_plantapiloto.csv',index=False)
-gruplac_pmaestria.to_csv('dashboard/assets/data/preprocessed_data/gruplac_pmaestria.csv',index=False)
-gruplac_prototipos.to_csv('dashboard/assets/data/preprocessed_data/gruplac_prototipos.csv',index=False)
-gruplac_software.to_csv('dashboard/assets/data/preprocessed_data/gruplac_software.csv',index=False)
+#GUARDAR CONJUNTOS DE DATOS LIMPIOS
+"""
+gruplac_articulos.to_csv('data/gruplac_articulos.csv',index=False)
+gruplac_basico.to_csv('data/gruplac_basico.csv',index=False)
+gruplac_caplibros.to_csv('data/gruplac_caplibros.csv',index=False)
+gruplac_integrantes.to_csv('data/gruplac_integrantes.csv',index=False)
+gruplac_libros.to_csv('data/gruplac_libros.csv',index=False)
+gruplac_oarticulos.to_csv('data/gruplac_oarticulos.csv',index=False)
+gruplac_olibros.to_csv('data/gruplac_olibros.csv',index=False)
+gruplac_cdoctorado.to_csv('data/gruplac_cdoctorado.csv',index=False)
+gruplac_cmaestria.to_csv('data/gruplac_cmaestria.csv',index=False)
+gruplac_disenoind.to_csv('data/gruplac_disenoind.csv',index=False)
+gruplac_empresatec.to_csv('data/gruplac_empresatec.csv',index=False)
+gruplac_innovaempresa.to_csv('data/gruplac_innovaempresa.csv',index=False)
+gruplac_instituciones.to_csv('data/gruplac_instituciones.csv',index=False)
+gruplac_lineas.to_csv('data/gruplac_lineas.csv',index=False)
+gruplac_otecnologicos.to_csv('data/gruplac_otecnologicos.csv',index=False)
+gruplac_pdoctorado.to_csv('data/gruplac_pdoctorado.csv',index=False)
+gruplac_plantapiloto.to_csv('data/gruplac_plantapiloto.csv',index=False)
+gruplac_pmaestria.to_csv('data/gruplac_pmaestria.csv',index=False)
+gruplac_prototipos.to_csv('data/gruplac_prototipos.csv',index=False)
+gruplac_software.to_csv('data/gruplac_software.csv',index=False)
+"""
 
-
-#ESTADÍSTICAS
+#ESTADÍSTICAS RESTANTES
 print("")
 print("Total de autores en Gruplac para el Cauca: ",gruplac_integrantes['url'].drop_duplicates().shape[0])
 print("Grupos en Gruplac: ",gruplac_basico.shape[0])
@@ -607,7 +611,7 @@ gruplac_lineas_copy=gruplac_lineas_copy.groupby('lineas').size().reset_index(nam
 print('Total de líneas de investigación entre los grupos del Cauca: ',gruplac_lineas_copy.shape[0])
 gruplac_lineas_copy=gruplac_lineas_copy[gruplac_lineas_copy['count']>1]
 print('Total de líneas de investigación compartidas entre los grupos: ',gruplac_lineas_copy.shape[0])
-print("**************PREPROCESAMIENTO FINALIZADO***************")
+print("**************LIMPIEZA FINALIZADA***************")
 
 
 
