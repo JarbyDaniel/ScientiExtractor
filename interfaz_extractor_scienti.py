@@ -496,9 +496,6 @@ def extractor():
    
     return render_template('extractor_scienti.html', **context_extractor)
 
-@app.route('/scopus', methods=['GET', 'POST']) 
-def scopus():    
-    return render_template('scopus.html')
 
 #Cambia de puerto de flask siempre que se ejecute directamente el main y no se exporte como un módulo
 if __name__ == "__main__":

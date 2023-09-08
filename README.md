@@ -45,10 +45,10 @@ Para extraer los datos de CvLAC y Gruplac de forma masiva (uso para administrado
 ```bash
     python main.py    
 ```
-Luego de la extracción, se ejecuta el preprocesamiento de los datos con el siguiente comando:
+Luego de la extracción, ejecute las estadísticas con el siguiente comando (se realizará automáticamente un proceso de limpieza previamente):
 
 ```bash
-    python preprocessing.py
+    python scienti_statistics.py
 ```
 Para extraer los datos de CvLAC y Gruplac  bajo demanda (con interfaz de usuario), siga los siguientes pasos:
 
