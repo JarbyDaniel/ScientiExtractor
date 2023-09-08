@@ -6,7 +6,7 @@ Software para la extracción de los datos bibliográficos de la producción cien
 Tiene las siguientes características principales:
 - Extrae datos de investigadores y grupos de investigación de las plataformas CvLAC y GrupLAC, de manera masiva o bajo demanda.
 - Búsqueda y eliminación de documentos duplicados.
-- Preprocesamiento de datos.
+- Estadìsticas y limpieza de datos.
 - Interfaz gráfica de usuario.
 
 ---
