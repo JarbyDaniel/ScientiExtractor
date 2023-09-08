@@ -1,7 +1,7 @@
 
-# Research Group Analitycs Dashboard
+# Research Group Extractor
 
-Software para la extracción de los datos bibliográficos de la producción científica de los invstigadores y de grupos de investigación registrados en las plataformas CvLAC y GrupLAC pertenecientes a Scienti.
+Software para la extracción de los datos bibliográficos de la producción científica de los investigadores y de grupos de investigación registrados en las plataformas CvLAC y GrupLAC pertenecientes a Scienti.
 
 Tiene las siguientes características principales:
 - Extrae datos de investigadores y grupos de investigación de las plataformas CvLAC y GrupLAC, de manera masiva o bajo demanda.
