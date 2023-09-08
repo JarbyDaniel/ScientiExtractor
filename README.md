@@ -34,7 +34,7 @@ Se recomienda que cualquier persona que utilice esta herramienta lea detenidamen
 
 ## Contexto
 
-El extractor presentado forma parte de un software desarrollado dentro del marco del trabajo de grado titulado “Dashboard para el análisis y visualización bibliométrica dentro del ámbito de los grupos de investigación en el departamento del Cauca” desarrollado en la Universidad del Cauca por los estudiantes Jarby Daniel Salazar Galindez y Edison Alexander Mosquera Perdomo.
+El extractor presentado forma parte de un software desarrollado dentro del marco del trabajo de grado titulado “Dashboard para el análisis y visualización bibliométrica dentro del ámbito de los grupos de investigación en el departamento del Cauca” desarrollado en la Universidad del Cauca por los estudiantes Edison Alexander Mosquera Perdomo y Jarby Daniel Salazar Galindez.
 
 ---
 
@@ -80,8 +80,8 @@ Ejemplo utilizado para el Departamento del Cauca:
 
 ## Autores
 
-- [Jarby Daniel Salazar Galindez](https://www.github.com/jarbydaniel)
 - [Edison Alexander Mosquera Perdomo](https://www.github.com/alexper11)
+- [Jarby Daniel Salazar Galindez](https://www.github.com/jarbydaniel)
 
 ## License
 
