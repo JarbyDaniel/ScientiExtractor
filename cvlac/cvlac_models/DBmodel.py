@@ -20,6 +20,9 @@ from cvlac.cvlac_models.Caplibros import Caplibros
 from cvlac.cvlac_models.Software import Software
 from cvlac.cvlac_models.Prototipo import Prototipo
 from cvlac.cvlac_models.MetaDB import MetaDB
+from cvlac.cvlac_models.EmpresaTecnologica import EmpresaTecnologica
+from cvlac.cvlac_models.InnovacionEmpresarial import InnovacionEmpresarial
+from cvlac.cvlac_models.Tecnologicos import Tecnologicos
 
 def create_cvlac_db():
     

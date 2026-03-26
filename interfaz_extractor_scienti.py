@@ -190,27 +190,38 @@ def extractor():
                     softwareObj = SoftwareController()
                     tecnologicosObj = TecnologicosController()
                     
-                    #Con cada objeto, elimina los datos para no guardar duplicados
-                    actuacionObj.delete_idcvlac(id_cvlac)
-                    articuloObj.delete_idcvlac(id_cvlac)
-                    evaluadorObj.delete_idcvlac(id_cvlac)
-                    identificadoresObj.delete_idcvlac(id_cvlac)
-                    idiomaObj.delete_idcvlac(id_cvlac)
-                    investigacionObj.delete_idcvlac(id_cvlac)
-                    juradosObj.delete_idcvlac(id_cvlac)
-                    librosObj.delete_idcvlac(id_cvlac)
-                    reconocimientoObj.delete_idcvlac(id_cvlac)
-                    redesObj.delete_idcvlac(id_cvlac)
-                    estanciasObj.delete_idcvlac(id_cvlac)
-                    academicaObj.delete_idcvlac(id_cvlac)
-                    complementariaObj.delete_idcvlac(id_cvlac)
-                    empresaTecnologicaObj.delete_idcvlac(id_cvlac)
-                    innovacionEmpresarialObj.delete_idcvlac(id_cvlac)
-                    capLibrosObj.delete_idcvlac(id_cvlac)
-                    prototipoObj.delete_idcvlac(id_cvlac)
-                    softwareObj.delete_idcvlac(id_cvlac)
-                    tecnologicosObj.delete_idcvlac(id_cvlac)
-                    basicoObj.delete_idcvlac(id_cvlac)
+                    # Con cada objeto, elimina los datos para no guardar duplicados
+                    try:
+                        actuacionObj.delete_idcvlac(id_cvlac)
+                        articuloObj.delete_idcvlac(id_cvlac)
+                        evaluadorObj.delete_idcvlac(id_cvlac)
+                        identificadoresObj.delete_idcvlac(id_cvlac)
+                        idiomaObj.delete_idcvlac(id_cvlac)
+                        investigacionObj.delete_idcvlac(id_cvlac)
+                        juradosObj.delete_idcvlac(id_cvlac)
+                        librosObj.delete_idcvlac(id_cvlac)
+                        reconocimientoObj.delete_idcvlac(id_cvlac)
+                        redesObj.delete_idcvlac(id_cvlac)
+                        estanciasObj.delete_idcvlac(id_cvlac)
+                        academicaObj.delete_idcvlac(id_cvlac)
+                        complementariaObj.delete_idcvlac(id_cvlac)
+                        empresaTecnologicaObj.delete_idcvlac(id_cvlac)
+                        innovacionEmpresarialObj.delete_idcvlac(id_cvlac)
+                        capLibrosObj.delete_idcvlac(id_cvlac)
+                        prototipoObj.delete_idcvlac(id_cvlac)
+                        softwareObj.delete_idcvlac(id_cvlac)
+                        tecnologicosObj.delete_idcvlac(id_cvlac)
+                        basicoObj.delete_idcvlac(id_cvlac)
+                    except Exception as err:
+                        # Si ocurre cualquier error, asegúrate de hacer rollback y notificar
+                        from cvlac import db_cvlac
+                        try:
+                            db_cvlac.session.rollback()
+                        except Exception:
+                            pass
+                        print('Error durante eliminación previa a inserción:', err)
+                        flash('Error al limpiar datos anteriores: '+str(err))
+                        raise
                     
                     #inserta los dataframes extraidos anteriormente y los almacena
                     basicoObj.insert_df(df_basico)
@@ -429,27 +440,36 @@ def extractor():
                         #Con cada objeto, elimina los datos para no guardar duplicados
                         list_idcvlac=dic_data['basico']['idcvlac'].tolist()
                         for id_cvlac in list_idcvlac:
-                            
-                            actuacionObj.delete_idcvlac(id_cvlac)
-                            articuloObj.delete_idcvlac(id_cvlac)
-                            evaluadorObj.delete_idcvlac(id_cvlac)
-                            identificadoresObj.delete_idcvlac(id_cvlac)
-                            idiomaObj.delete_idcvlac(id_cvlac)
-                            investigacionObj.delete_idcvlac(id_cvlac)
-                            juradosObj.delete_idcvlac(id_cvlac)
-                            librosObj.delete_idcvlac(id_cvlac)
-                            reconocimientoObj.delete_idcvlac(id_cvlac)
-                            redesObj.delete_idcvlac(id_cvlac)
-                            estanciasObj.delete_idcvlac(id_cvlac)
-                            academicaObj.delete_idcvlac(id_cvlac)
-                            complementariaObj.delete_idcvlac(id_cvlac)
-                            empresaTecnologicaObj.delete_idcvlac(id_cvlac)
-                            innovacionEmpresarialObj.delete_idcvlac(id_cvlac)
-                            capLibrosObj.delete_idcvlac(id_cvlac)
-                            prototipoObj.delete_idcvlac(id_cvlac)
-                            softwareObj.delete_idcvlac(id_cvlac)
-                            tecnologicosObj.delete_idcvlac(id_cvlac)   
-                            basicoObj.delete_idcvlac(id_cvlac)                           
+                            try:
+                                actuacionObj.delete_idcvlac(id_cvlac)
+                                articuloObj.delete_idcvlac(id_cvlac)
+                                evaluadorObj.delete_idcvlac(id_cvlac)
+                                identificadoresObj.delete_idcvlac(id_cvlac)
+                                idiomaObj.delete_idcvlac(id_cvlac)
+                                investigacionObj.delete_idcvlac(id_cvlac)
+                                juradosObj.delete_idcvlac(id_cvlac)
+                                librosObj.delete_idcvlac(id_cvlac)
+                                reconocimientoObj.delete_idcvlac(id_cvlac)
+                                redesObj.delete_idcvlac(id_cvlac)
+                                estanciasObj.delete_idcvlac(id_cvlac)
+                                academicaObj.delete_idcvlac(id_cvlac)
+                                complementariaObj.delete_idcvlac(id_cvlac)
+                                empresaTecnologicaObj.delete_idcvlac(id_cvlac)
+                                innovacionEmpresarialObj.delete_idcvlac(id_cvlac)
+                                capLibrosObj.delete_idcvlac(id_cvlac)
+                                prototipoObj.delete_idcvlac(id_cvlac)
+                                softwareObj.delete_idcvlac(id_cvlac)
+                                tecnologicosObj.delete_idcvlac(id_cvlac)
+                                basicoObj.delete_idcvlac(id_cvlac)
+                            except Exception as err:
+                                from cvlac import db_cvlac
+                                try:
+                                    db_cvlac.session.rollback()
+                                except Exception:
+                                    pass
+                                print('Error durante eliminación en lote:', err)
+                                flash('Error al limpiar datos anteriores: '+str(err))
+                                raise
                                         
                         #inserta los dataframes extraidos anteriormente y los almacena
                         basicoObj.insert_df(dic_data['basico'])
