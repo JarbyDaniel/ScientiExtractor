@@ -2,7 +2,6 @@ from wsgiref import validate
 import requests
 from bs4 import BeautifulSoup
 from pyquery import PyQuery as pq
-from selenium import webdriver
 import pathlib
 import platform
 import time
